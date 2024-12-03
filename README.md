@@ -1,6 +1,8 @@
+## Repository Name: data-explorer
+## Date: December 2nd 2024
+## Description: An interactive web application for exploring and visualizing datasets. This tool allows users to upload CSV files, create various types of visualizations, and view statistical summaries of their data.
+---
 # Data Explorer by Clay Bowser
-
-An interactive web application for exploring and visualizing datasets. This tool allows users to upload CSV files, create various types of visualizations, and view statistical summaries of their data.
 
 ## Features
 
@@ -36,7 +38,7 @@ data-explorer/
 
 1. Clone the repository or create a new directory:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/claybowser/data-explorer.git
    cd data-explorer
    ```
 
@@ -138,3 +140,6 @@ Feel free to submit issues, fork the repository, and create pull requests for an
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Application User Interface
+![2024-12-02 Screenshot of Data Explorer applications UI.](data-explorer-claybowser.png "2024-12-02 Screenshot of Data Explorer applications UI.")
