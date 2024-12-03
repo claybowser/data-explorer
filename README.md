@@ -1,7 +1,7 @@
 ### Repository Name: data-explorer
 ### Author: Clay Bowser
 ### Date: December 2nd 2024
-### This repository hosts an interactive web application for exploring and visualizing datasets. This tool allows users to upload CSV files, create various types of visualizations, and view statistical summaries of their data.
+### This repository hosts an interactive Flask based web application for exploring and visualizing datasets. This tool allows users to upload CSV files, create various types of visualizations, and view statistical summaries of their data.
 ---
 # Data Explorer by Clay Bowser
 
