@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Explorer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header-section">
+            <h1>Data Explorer by Clay Bowser</h1>
+            <button id="downloadReport" onclick="generateReport()" class="download-btn">
+                <span>📥</span> Download Report
+            </button>
+        </div>
+        
+        <div class="upload-section">
+            <h2>Upload Dataset</h2>
+            <form enctype="multipart/form-data">
+                <input type="file" id="fileUpload" accept=".csv">
+                <button type="button" onclick="uploadFile()">Upload</button>
+            </form>
+        </div>
+
+        <div class="visualization-section section-hidden">
+            <h2>Create Visualization</h2>
+            
+            <div class="plot-info">
+                <select id="plotType" onchange="updateColumnSelectors()">
+                    <option value="scatter">Scatter Plot</option>
+                    <option value="bar">Bar Chart</option>
+                    <option value="heatmap">Correlation Heatmap</option>
+                </select>
+                
+                <div id="plotDescription" class="plot-description"></div>
+            </div>
+            
+            <div id="columnSelectors">
+                <div class="column-select">
+                    <label id="xColumnLabel">X-Axis:</label>
+                    <select id="xColumn"></select>
+                </div>
+                <div class="column-select">
+                    <label>Y-Axis:</label>
+                    <select id="yColumn"></select>
+                </div>
+            </div>
+            
+            <button onclick="generatePlot()">Generate Plot</button>
+            
+            <div id="plotOutput">
+                <img id="plotImage" src="" alt="Plot will appear here">
+            </div>
+        </div>
+
+        <div class="summary-section section-hidden">
+            <h2>Dataset Summary</h2>
+            <button onclick="getSummary()">Get Summary</button>
+            <div id="summaryOutput"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> 
